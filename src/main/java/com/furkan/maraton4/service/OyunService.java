@@ -46,7 +46,7 @@ public class OyunService extends ServiceManager<Oyun,Long> {
             while (oyun.getHak()>0 && soru.getDogrucevap().equals(dto.getCevap())){
                 System.out.println("while içinde doğru cevap verildi sorunun doğru cevabı" + soru.getDogrucevap()+" dto cevabı "+dto.getCevap());
 
-                oyuncu.setPuan(soru.getPuan());
+                oyuncu.setPuan(soru.getPuan()+oyuncu.getPuan());
                 oyuncuService.save(oyuncu);
 
                 return "doğru cevap verdiniz aferin: "+soru.getPuan()+" puan kazandınız";

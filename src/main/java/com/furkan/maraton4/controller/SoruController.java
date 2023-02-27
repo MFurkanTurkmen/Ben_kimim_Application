@@ -24,11 +24,6 @@ public class SoruController {
         return ResponseEntity.ok("soru save edildi");
     }
 
-    @GetMapping(FINDALL)
-    public ResponseEntity<List<SoruResponseDto>>  findAll(){
-        return ResponseEntity.ok(soruService.findAllDto());
-    }
-
 
     @DeleteMapping(DELETE)
     public ResponseEntity<String> deleteById(Long id){
